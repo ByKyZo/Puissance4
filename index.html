@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-color: rgb(66, 66, 66);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid {
+        position: relative;
+        /* display: flex; */
+    }
+
+    /* .token {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+    } */
+
+    .player1 {
+        background-color: rgb(218, 56, 56);
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .player2 {
+        background-color: rgb(50, 50, 221);
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .col {
+        background-color: transparent;
+        border: none;
+        display: flex;
+    }
+
+    .cell {
+        border: 1px solid white;
+    }
+</style>
+
+<body>
+
+    <!-- <canvas id="game">
+    </canvas> -->
+    <main class="game">
+        <div class="grid"></div>
+    </main>
+
+    <script src="./js/Game.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
