@@ -19,62 +19,93 @@
         left: 0;
     }
 
+    .game {
+        background-color: #424242;
+
+    }
+
     main {
         position: fixed;
         top: 0;
         left: 0;
         min-height: 100vh;
         min-width: 100vw;
-        background-color: rgb(66, 66, 66);
+        /* background-color: rgb(66, 66, 66); */
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .grid {
-        position: relative;
-        /* display: flex; */
+    .score {
+        font-size: 2rem;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    /* .token {
+    .grid {
+        position: relative;
+        background-color: #262626;
+        padding: 10px;
+        border: 1px solid #B5B5B5;
+    }
+
+    .token {
         border-radius: 50%;
         height: 100%;
         width: 100%;
-    } */
+    }
 
     .player1 {
         background-color: rgb(218, 56, 56);
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
     }
 
     .player2 {
         background-color: rgb(50, 50, 221);
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
     }
 
-    .col {
+    .placeholder {
+        opacity: 0.3;
+    }
+
+    .row {
         background-color: transparent;
         border: none;
         display: flex;
     }
 
     .cell {
-        border: 1px solid white;
+        /* border: 1px solid white; */
+        border: 1px solid #B5B5B5;
+        /* background-color: #262626; */
+        background-color: #424242;
+        margin: 6px;
+        border-radius: 50%;
     }
 </style>
 
 <body>
 
-    <!-- <canvas id="game">
-    </canvas> -->
     <main class="game">
+        <div class="score">
+            <div class="">
+                <span id='player1-pseudo'></span>
+                <span id='player1-score'></span>
+            </div>
+            <div class="">
+                <span id='player2-pseudo'></span>
+                <span id='player2-score'></span>
+            </div>
+        </div>
         <div class="grid"></div>
     </main>
 
+    <div class="signin">
+
+    </div>
+
+    <script src="./js/Player.js"></script>
     <script src="./js/Game.js"></script>
     <script src="./js/index.js"></script>
 </body>
